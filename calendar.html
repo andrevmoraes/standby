@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="10;url=index.html"/>
+    <title>Calendário</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: #000000;
+            margin: 0;
+        }
+
+        #calendar {
+            font-family: 'Nunito', sans-serif;
+            color: #fff;
+            text-align: center;
+            font-size: 3.2vw;
+            letter-spacing: 0.07em;
+        }
+
+        #month {
+            text-align: left;
+            padding: 1vw 1vw;
+            color: red;
+        }
+
+        .weekend {
+            color: #707070;
+            padding: 1vw 1vw;
+        }
+
+        .weekday {
+            margin: 0;
+            padding: 1vw 1vw;
+        }
+
+        .imgcalendar {
+            width: 42vw;
+            height: 74vh;
+            object-fit: cover;
+            object-position: 20% 10%;
+            border-radius: 15%;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th><img class="imgcalendar"
+                    src="https://images.unsplash.com/photo-1723323419477-455f28ebd193?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            </th>
+            <th>
+                <div width="10vw">zzzzzzzzzzzz</div>
+            </th>
+            <th>
+                <div id="calendar">
+                    <div id="calendar-header">
+                        <table>
+
+                        </table>
+                    </div>
+                    <div id="days-of-week">
+                        <table>
+                            <tr>
+                                <th colspan="7" id="month">SETEMBRO</th>
+                            </tr>
+                            <tr>
+                                <th class="weekend">D</th>
+                                <th class="weekday">S</th>
+                                <th class="weekday">T</th>
+                                <th class="weekday">Q</th>
+                                <th class="weekday">Q</th>
+                                <th class="weekday">S</th>
+                                <th class="weekend">S</th>
+                            </tr>
+                            <tr>
+                                <th class="weekend">1</th>
+                                <th class="weekday">2</th>
+                                <th class="weekday">3</th>
+                                <th class="weekday">4</th>
+                                <th class="weekday">5</th>
+                                <th class="weekday">6</th>
+                                <th class="weekend">7</th>
+                            </tr>
+                            <tr>
+                                <th class="weekend">8</th>
+                                <th class="weekday">9</th>
+                                <th class="weekday">10</th>
+                                <th class="weekday">11</th>
+                                <th class="weekday">12</th>
+                                <th class="weekday">13</th>
+                                <th class="weekend">14</th>
+                            </tr>
+                            <tr>
+                                <th class="weekend">15</th>
+                                <th class="weekday">16</th>
+                                <th class="weekday">17</th>
+                                <th class="weekday">18</th>
+                                <th class="weekday">19</th>
+                                <th class="weekday">20</th>
+                                <th class="weekend">21</th>
+                            </tr>
+                            <tr>
+                                <th class="weekend">22</th>
+                                <th class="weekday">23</th>
+                                <th class="weekday">24</th>
+                                <th class="weekday">25</th>
+                                <th class="weekday">26</th>
+                                <th class="weekday">27</th>
+                                <th class="weekend">28</th>
+                            </tr>
+                            <tr>
+                                <th class="weekend">29</th>
+                                <th class="weekday">30</th>
+                                <th class="weekday"></th>
+                                <th class="weekday"></th>
+                                <th class="weekday"></th>
+                                <th class="weekday"></th>
+                                <th class="weekend"></th>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- Aqui você pode adicionar as datas do mês -->
+                </div>
+            </th>
+        </tr>
+    </table>
+
+    <script>
+        function updateClock() {
+            //const clockElement = document.getElementById('clock');
+            //console.log(clockElement);
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            console.log(hours);
+            //clockElement.textContent = `${hours}:${minutes}`;
+
+            document.getElementById('hourTens').textContent = hours.charAt(0);
+            document.getElementById('hourOnes').textContent = hours.charAt(1);
+            document.getElementById('minuteTens').textContent = minutes.charAt(0);
+            document.getElementById('minuteOnes').textContent = minutes.charAt(1);
+        }
+
+        setInterval(updateClock, 10000);
+        updateClock();
+    </script>
+</body>
+
+</html>
