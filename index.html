@@ -78,6 +78,20 @@
         }
         setInterval(updateClock, 5000);
         updateClock();
+
+        function entrarTelaCheia() {
+            const elemento = document.documentElement;
+            if (elemento.requestFullscreen) {
+                elemento.requestFullscreen();
+            } else if (elemento.mozRequestFullScreen) { // Firefox
+                elemento.mozRequestFullScreen();
+            } else if (elemento.webkitRequestFullscreen) { // Chrome, Safari e Opera
+                elemento.webkitRequestFullscreen();
+            } else if (elemento.msRequestFullscreen) { // Internet Explorer/Edge
+                elemento.msRequestFullscreen();
+            }
+        }
+        entrarTelaCheia();
     </script>
 </body>
 
