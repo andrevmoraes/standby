@@ -32,6 +32,31 @@
             color: red;
         }
 
+        #button-container {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        #centerButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+            background-color: #33333320;
+            color: #ffffff20;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        #centerButton:hover {
+            background-color: #55555520;
+        }
+
         .weekend {
             color: #707070;
             padding: 1vw 1vw;
@@ -133,6 +158,11 @@
             </th>
         </tr>
     </table>
+    <div id="button-container">
+        <button id="centerButton" onclick="window.location.href='index.html'">relógio</button>
+        <button id="centerButton" onclick="window.location.href='wimage.html'">imagem do dia</button>
+        <button id="centerButton" onclick="window.location.href='index-color.html'">colorido</button>
+    </div>
 
     <script>
         function updateClock() {

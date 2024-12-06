@@ -26,7 +26,7 @@
             font-size: 22vw;
             font-family: 'Nunito', sans-serif;
             font-weight: bold;
-            text-shadow: 0px 0px 0px rgba(248, 248, 248, 0.55);
+            text-shadow: 0px 0px 0px #f8f8f854;
             letter-spacing: -0.35em;
             background-clip: text;
             -webkit-background-clip: text;
@@ -52,6 +52,31 @@
         #minuteOnes {
             transform: rotate(4deg);
         }
+
+        #button-container {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        #centerButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+            background-color: #f8f8f824;
+            color: #ffffff30;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        #centerButton:hover {
+            background-color: #55555530;
+        }
     </style>
 </head>
 
@@ -62,6 +87,11 @@
         <h1 id="separator">:</h1>
         <h1 id="minuteTens">0</h1>
         <h1 id="minuteOnes">0</h1>
+    </div>
+    <div id="button-container">
+        <button id="centerButton" onclick="window.location.href='index.html'">relógio</button>
+        <button id="centerButton" onclick="window.location.href='calendar.html'">calendário</button>
+        <button id="centerButton" onclick="window.location.href='index-color.html'">colorido</button>
     </div>
 
     <script>

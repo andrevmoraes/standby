@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio com Efeito Fosco</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+        .clock-container {
+            display: flex;
+            gap: 10px;
+        }
+        .character {
+            font-size: 48vh;
+            color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock-container">
+        <div class="character" style="color: rgba(205, 133, 63, 0.65); transform: rotate(-4deg);">9</div>
+        <div class="character" style="color: rgba(244, 164, 96, 0.65); transform: rotate(4deg);">4</div>
+        <div class="character" style="color: rgba(5, 255, 255, 0.85); transform: rotate(0deg);">:</div>
+        <div class="character" style="color: rgba(210, 180, 140, 0.65); transform: rotate(-4deg);">4</div>
+        <div class="character" style="color: rgba(255, 228, 181, 0.65); transform: rotate(4deg);">1</div>
+    </div>
+</body>
+</html>

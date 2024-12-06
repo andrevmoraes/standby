@@ -16,7 +16,6 @@
             width: 92vw;
             background-color: #000000;
             margin: 0;
-            position: relative;
         }
 
         #clock {
@@ -28,12 +27,39 @@
             letter-spacing: -0.35em;
         }
 
-        #hourTens, #hourOnes, #separator, #minuteTens, #minuteOnes, #secTens, #secOnes {
-            color: rgba(222, 184, 135, 0.65);
+        #hourTens {
+            transform: rotate(-4deg);
+            color: rgba(87, 248, 178, 0.65);
+        }
+
+        #hourOnes {
+            transform: rotate(4deg);
+            color: rgba(248, 87, 157, 0.65);
         }
 
         #separator {
-            color: rgba(222, 184, 135, 0.85);
+            transform: rotate(0deg);
+            color: rgba(5, 255, 255, 0.85);
+        }
+
+        #minuteTens {
+            transform: rotate(-4deg);
+            color: rgba(238, 248, 87, 0.65);
+        }
+
+        #minuteOnes {
+            transform: rotate(4deg);
+            color: rgba(98, 87, 248, 0.65)
+        }
+
+        #secTens {
+            transform: rotate(-4deg);
+            color: rgba(238, 248, 87, 0.65);
+        }
+
+        #secOnes {
+            transform: rotate(4deg);
+            color: rgba(98, 87, 248, 0.65)
         }
 
         #button-container {
@@ -64,17 +90,20 @@
 </head>
 
 <body>
-    <div id="clock">
+    <div id="clock" href="/calendar.html">
         <h1 id="hourTens">0</h1>
         <h1 id="hourOnes">0</h1>
         <h1 id="separator">:</h1>
         <h1 id="minuteTens">0</h1>
         <h1 id="minuteOnes">0</h1>
+        <!--<h1 id="separator">:</h1>
+        <h1 id="secTens">0</h1>
+        <h1 id="secOnes">0</h1>-->
     </div>
     <div id="button-container">
+        <button id="centerButton" onclick="window.location.href='index.html'">relógio</button>
         <button id="centerButton" onclick="window.location.href='calendar.html'">calendário</button>
         <button id="centerButton" onclick="window.location.href='wimage.html'">imagem do dia</button>
-        <button id="centerButton" onclick="window.location.href='index-color.html'">colorido</button>
     </div>
 
     <script>
@@ -88,6 +117,8 @@
             document.getElementById('hourOnes').textContent = hours.charAt(1);
             document.getElementById('minuteTens').textContent = minutes.charAt(0);
             document.getElementById('minuteOnes').textContent = minutes.charAt(1);
+            //document.getElementById('secTens').textContent = seconds.charAt(0);
+            //document.getElementById('secOnes').textContent = seconds.charAt(1);
         }
         setInterval(updateClock, 1000);
         updateClock();
